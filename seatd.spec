@@ -6,6 +6,7 @@ License:	MIT
 Group:		Applications
 Source0:	https://git.sr.ht/~kennylevinsen/seatd/archive/%{version}.tar.gz
 # Source0-md5:	264a36907f4be34efa400fb6e1b26f5f
+Patch0:		x32.patch
 URL:		https://git.sr.ht/~kennylevinsen/seatd
 BuildRequires:	meson >= 0.56.0
 BuildRequires:	ninja
@@ -57,6 +58,7 @@ Static libseat library.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %meson build \
