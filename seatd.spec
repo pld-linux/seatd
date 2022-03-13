@@ -1,11 +1,11 @@
 Summary:	Seat management daemon
 Name:		seatd
-Version:	0.5.0
+Version:	0.6.4
 Release:	1
 License:	MIT
 Group:		Applications
 Source0:	https://git.sr.ht/~kennylevinsen/seatd/archive/%{version}.tar.gz
-# Source0-md5:	264a36907f4be34efa400fb6e1b26f5f
+# Source0-md5:	114604a0b346a40157839d5c8c8b2ce2
 Patch0:		x32.patch
 URL:		https://git.sr.ht/~kennylevinsen/seatd
 BuildRequires:	meson >= 0.56.0
@@ -62,7 +62,7 @@ Static libseat library.
 
 %build
 %meson build \
-	-Dlogind=enabled
+	-Dlibseat-logind=systemd
 %ninja_build -C build
 
 %install
@@ -80,7 +80,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README.md
 %attr(755,root,root) %{_bindir}/seatd
+%attr(755,root,root) %{_bindir}/seatd-launch
 %{_mandir}/man1/seatd.1*
+%{_mandir}/man1/seatd-launch.1*
 
 %files -n libseat
 %defattr(644,root,root,755)
