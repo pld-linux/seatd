@@ -1,14 +1,14 @@
 Summary:	Seat management daemon
 Name:		seatd
-Version:	0.6.4
+Version:	0.7.0
 Release:	1
 License:	MIT
 Group:		Applications
 Source0:	https://git.sr.ht/~kennylevinsen/seatd/archive/%{version}.tar.gz
-# Source0-md5:	114604a0b346a40157839d5c8c8b2ce2
+# Source0-md5:	922b8a4ca4dfdb1f43a294db9e77bcf7
 Patch0:		x32.patch
 URL:		https://git.sr.ht/~kennylevinsen/seatd
-BuildRequires:	meson >= 0.56.0
+BuildRequires:	meson >= 0.60.0
 BuildRequires:	ninja
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.736
