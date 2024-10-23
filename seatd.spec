@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	static_libs	# static library
+
 Summary:	Seat management daemon
 Summary(pl.UTF-8):	Demon zarządzania stanowiskami (seatd)
 Name:		seatd
@@ -87,6 +91,7 @@ Biblioteka statyczna libseat.
 
 %build
 %meson build \
+	%{!?with_static_libs:--default-library=shared} \
 	-Dlibseat-logind=systemd
 
 %ninja_build -C build
@@ -120,6 +125,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/libseat.h
 %{_pkgconfigdir}/libseat.pc
 
+%if %{with static_libs}
 %files -n libseat-static
 %defattr(644,root,root,755)
 %{_libdir}/libseat.a
+%endif
