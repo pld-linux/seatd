@@ -5,12 +5,12 @@
 Summary:	Seat management daemon
 Summary(pl.UTF-8):	Demon zarządzania stanowiskami (seatd)
 Name:		seatd
-Version:	0.9.0
+Version:	0.9.1
 Release:	1
 License:	MIT
 Group:		Applications
 Source0:	https://git.sr.ht/~kennylevinsen/seatd/archive/%{version}.tar.gz
-# Source0-md5:	d759cd1af31e90100e9f728e2ec16583
+# Source0-md5:	964a9c59cdfe39f9130508c274e8ae21
 Patch0:		x32.patch
 URL:		https://git.sr.ht/~kennylevinsen/seatd
 BuildRequires:	meson >= 0.60.0
