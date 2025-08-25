@@ -16,7 +16,7 @@ URL:		https://git.sr.ht/~kennylevinsen/seatd
 BuildRequires:	meson >= 0.60.0
 BuildRequires:	ninja >= 1.5
 BuildRequires:	pkgconfig
-BuildRequires:	rpmbuild(macros) >= 1.736
+BuildRequires:	rpmbuild(macros) >= 2.042
 BuildRequires:	scdoc >= 1.9.7
 BuildRequires:	systemd-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
